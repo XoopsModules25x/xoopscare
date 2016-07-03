@@ -1,0 +1,14 @@
+1.4 Beta 1              NOT RELEASED
+---------------------------------------
+- Converted to XOOPS 2.5.8 Admin GUI (Mamba)
+
+
+v1.3 (Hervé Thouzard)
+---------------------------------------
+- The module should be fully compatible with Xoops 2.3.3
+- English and French translations available in UTF8
+
+
+1.21 (Hervé Thouzard)
+---------------------------------------
+- Addition of the cleaning of Fastest Cache Hack (thanks jayjay)

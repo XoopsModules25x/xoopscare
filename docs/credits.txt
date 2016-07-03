@@ -1,0 +1,6 @@
+Credits
+===============
+
+Originally developed by Hervé Thouzard
+
+Version 1.4 was updated to XOOPS 2.5.8 Standard GUI by Michael Beck (Mamba)

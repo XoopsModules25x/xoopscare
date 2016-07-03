@@ -1,0 +1,108 @@
+<div id="help-template" class="outer">
+    <{include file=$smarty.const._MI_XC_HELP_HEADER}>
+
+    <h4 class="odd">Description</h4>
+
+    <p class="even"><strong>XoopsCare</strong> is a module to help you to maintain your website easily and <b>automatically</b>.
+        <br> <br>
+    </p>
+
+    <h4 class="odd">Install/uninstall</h4>
+
+    <p class="even">No special measures necessary, follow the standard installation process –
+        extract the module folder into the ../modules directory. Install the
+        module through Admin -> System Module -> Modules.<br><br>
+        Detailed instructions on installing modules are available in the
+        <a href="https://www.gitbook.com/book/xoops/xoops-operations-guide/" target="_blank">Chapter 2.12 of our XOOPS Operations Manual</a></p>
+
+
+    <h4 class="odd">Operating instructions</h4>
+
+    With the module you can :<br><br>
+    1/ Maintain your database<br>
+    2/ Run you own queries<br>
+    3/ Execute Php code<br>
+    4/ Clean templates_c and cache folders<br>
+    5/ Remove spammed comments<br>
+    6/ Clean sessions<br><br>
+
+    For each of this actions, you can define if you want to do it or not and when to do it (you can schedule it).<br><br>
+
+    Additionally, you can log all the actions made by the module and (if you have them), use CRONs to maintain you site.<br><br>
+
+    If you have the possibility to call the module with a CRON, then simply call the file named <i>cron.php</i> present
+    at the module's root and pass it a password you have typed in the module's administration.<br>
+    Do it like this : http://www.example.com/modules/xoopscare/cron.php?password=mypassword
+    <b>If you use a cron and don't type a password, the module will not do anything</b>, this is just to protect
+    your site from people who could use it.
+
+    If you don't have the possibility to use a CRON then activate the module's block somewhere on your site (where
+    you want), and the module will automatically and when it's necessary, do the tasks you scheduled.
+    <br> Tip : You can use a cache on the block.<br><br>
+
+    The first thing to do is to go in the module's administration and to set the preferences.
+    <br> In the first part <b>General Preferences</b>, set the CRON password if you use CRON.
+    <br> If you want to create a log file, then fill the zone called <i>Log File</i>.
+    <br> Note, it is recommended, for security reasons, to give this filename a <span style="text-decoration: underline;">.php</span> extension.<br><br>
+
+    In the part called <b>Database Maintenance</b>, type a delay in days to maintain your database.
+    <br> If you set this delay to 0 then nothing will be done.
+    <br> The process of this action is to check, repair, analyse and optimize all the tables used by your Xoops site.<br><br>
+
+
+    In the part called <b>Queries</b>, first type an execution's delay then (but only if you need it), type some
+    SQL queries to run against your database.<br>
+    <br> Note, the module does not apply anything to your queries, it takes them one by one and execute it.<br><br>
+
+    You can do the same thing than in the previous point but to execute some Php code in the part called <b>Php code</b><br><br>
+
+    The part called <b>Cache and Templates_c</b> gives you the possibility to clean the cache and templates_c folder
+    (folders at the root of your site)<br><br>
+
+    The <b>Sessions</b> part will give you the possibility to clean your Mysql session's table at a given delay.<br><br>
+
+
+    Finally, with the part called <b>Spammed comments</b>, you can remove all the spam from your comments.<br>
+    This functionality of the module runs with the Xoops <i>Word Censoring Options</i>.<br>
+    First, from the <i>Site Preferences</i>, you must Enable censoring of unwanted words, type some words to censor and
+    select a word to replace with.<br>
+    By default, censored words are replaced by #OOPS#.<br>
+    The XoopsCare module will search for comments containing this replacement in the comment's titles and/or comment's content
+    and will apply your preferences on this comments.<br>
+    Additionally, the module can extract the spammer's IPs (from the comments) and automatically add their IPs to your ban list.<br>
+    Finally, you can select what to do with the comments detected as SPAM, you can keep them, unpublish them, hide them and
+    delete them. <br><br>
+
+    If you use a CRON to clean your site, then the delay entered for each action is not used but this delay must be greater than 0.<br><br>
+
+    Detailed instructions on configuring the access rights for user groups are available in the
+    <a href="https://www.gitbook.com/book/xoops/xoops-operations-guide/" target="_blank">Chapter 2.8 of our XOOPS Operations Manual</a><br> <br>
+
+    <h4 class="odd">Tutorial</h4>
+
+    <p class="even">
+        Tutorial has been started, but we might need your help! Please check it out the status of the tutorial <a href="https://www.gitbook.com/book/xoops/xoopscare-tutorial/" target="_blank">here </a>.
+        <br><br>To contribute to this Tutorial, <a href="https://github.com/XoopsDocs/xoopscare-tutorial/" target="_blank">please fork it on GitHub</a>.
+        <br> This document describes our <a href="https://www.gitbook.com/book/xoops/xoops-documentation-process/details/" target="_blank">Documentation Process</a> and it will help you to understand how to contribute.
+        <br><br>
+        There are more XOOPS Tutorials, so check them out in our <a href="https://www.gitbook.com/@xoops/" target="_blank">XOOPS Tutorial Repository on GitBook</a>.
+    </p>
+
+
+    <h4 class="odd">Translations</h4>
+    <p class="even">Translations are on <a href="https://www.transifex.com/xoops/" target="_blank">Transifex</a> and in our <a href="https://github.com/XoopsLanguages/" target="_blank">XOOPS Languages Repository on GitHub</a>.</p>
+
+    <h4 class="odd">Support</h4>
+    <p class="even">If you have questions about this module and need help, you can visit our <a href="http://xoops.org/modules/newbb/viewforum.php?forum=28/" target="_blank">Support Forums on XOOPS Website</a></p>
+
+    <h4 class="odd">Development</h4>
+    <p class="even">This module is Open Source and we would love your help in making it better! You can fork this module on <a href="https://github.com/XoopsModulesArchive/xoopscare" target="_blank">GitHub</a><br><br>
+        But there is more happening on GitHub:<br><br>
+        - <a href="https://github.com/xoops" target="_blank">XOOPS Core</a> <br>
+        - <a href="https://github.com/XoopsModules25x" target="_blank">XOOPS Modules</a><br>
+        - <a href="https://github.com/XoopsThemes" target="_blank">XOOPS Themese</a><br><br>
+        Go check it out, and <strong>GET INVOLVED</strong>
+
+    </p>
+
+</div>
